@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_50"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        android:adjustViewBounds="false"
+        android:paddingTop="60dp"
+        android:src="@drawable/logo_nobg"
+        fancy:srcCompat="@drawable/logo_nobg" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:fontFamily="@font/karma_light"
+            android:includeFontPadding="false"
+            android:text="Escola Primária"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginTop="-10dp"
+            android:fontFamily="@font/karma_light"
+            android:includeFontPadding="false"
+            android:padding="0dp"
+            android:text="One World Academy"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/karma_light"
+            android:gravity="left|center"
+            android:includeFontPadding="false"
+            android:padding="0dp"
+            android:text="Maxixe, Moçambique"
+            android:textColor="@color/md_grey_600"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="80dp">
+
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
+            android:id="@+id/btn_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            fancy:mfb_borderWidth="1dp"
+            fancy:mfb_defaultColor="@color/colorPrimaryDark"
+            fancy:mfb_focusColor="#9bd823"
+            fancy:mfb_icon="@string/cmdi_arrow_right_bold_circle"
+            fancy:mfb_iconPosition="right"
+            fancy:mfb_radius="50dp"
+            fancy:mfb_text="@string/go"
+            fancy:mfb_textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</LinearLayout>

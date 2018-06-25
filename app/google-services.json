@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "723787743422",
+    "firebase_url": "https://up-maxixe.firebaseio.com",
+    "project_id": "up-maxixe",
+    "storage_bucket": "up-maxixe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723787743422:android:c7ae812c7ad22a81",
+        "android_client_info": {
+          "package_name": "com.oneworldacademymz.owa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723787743422-metihk3fqaou5bk9qveqr2lcdr6239td.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "723787743422-metihk3fqaou5bk9qveqr2lcdr6239td.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvAUV93Ml6JbYOg0LfwCz25YibMPWmTTE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

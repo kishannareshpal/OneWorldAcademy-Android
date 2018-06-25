@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">One World Academy</string>
+
+    <!-- Main Activity -->
+    <string name="go"><strong>Seguinte</strong></string>
+    <string name="school"><strong>Escola Primária</strong></string>
+
+
+    <!-- SignIn Activity -->
+    <string name="autenticar"><strong>Autenticar</strong></string>
+    <!--<string name="student_classe">%1$sª Classe</string>-->
+
+
+    <!-- Profile Activity -->
+    <string name="prim_Trim">1º Trimestre: %1$s</string>
+    <string name="seg_Trim">2º Trimestre: %1$s</string>
+    <string name="ter_Trim">3º Trimestre: %1$s</string>
+    <string name="nota_final">Nota Final: %1$s</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+
+    <!--android:id="@+id/cv_alunoCard"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:layout_marginEnd="5dp"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:layout_marginStart="5dp"-->
+    <!--android:background="@drawable/alunos_selector"-->
+    <!--app:cardCornerRadius="3dp"-->
+    <!--app:cardElevation="2dp"-->
+    <!--app:cardUseCompatPadding="true"-->
+    <!--app:contentPadding="20dp">-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_stName"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:fontFamily="@font/roboto_bold"-->
+            <!--android:gravity="center"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/md_black_1000"-->
+            <!--android:textSize="18sp"-->
+            <!--tools:text="Student Name" />-->
+
+    <!--</LinearLayout>-->
+<!--</android.support.v7.widget.CardView>-->
+
+
+<android.support.design.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/md_white_1000"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/roboto_black"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textColor="@color/md_black_1000"
+            android:textSize="14sp" />
+    </LinearLayout>
+</android.support.design.card.MaterialCardView>
+
