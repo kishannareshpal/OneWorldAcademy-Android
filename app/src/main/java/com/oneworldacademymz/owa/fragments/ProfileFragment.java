@@ -1,4 +1,4 @@
-package com.oneworldacademymz.owa;
+package com.oneworldacademymz.owa.fragments;
 
 
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.oneworldacademymz.owa.R;
 
 
 /**

@@ -2,6 +2,7 @@ package com.oneworldacademymz.owa;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +12,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.oneworldacademymz.owa.activities.ProfileActivity;
 import com.robertlevonyan.views.chip.Chip;
 
 import java.util.List;
@@ -23,6 +26,9 @@ public class AlunoAdapter extends RecyclerView.Adapter<AlunoAdapter.AlunoViewHol
     private Context mContext;
     private AdapterView.OnItemClickListener onItemClickListener;
 
+    private SharedPreferences status;
+    private int id;
+
     public AlunoAdapter(Context context, List<Aluno> listItems) {
         mContext = context;
         mSingleCheckList = listItems;
@@ -32,6 +38,7 @@ public class AlunoAdapter extends RecyclerView.Adapter<AlunoAdapter.AlunoViewHol
     public AlunoViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         final View view = inflater.inflate(R.layout.alunos_list, viewGroup, false);
+        status = ProfileActivity.status;
         return new AlunoViewHolder(view, this);
     }
 
@@ -39,7 +46,8 @@ public class AlunoAdapter extends RecyclerView.Adapter<AlunoAdapter.AlunoViewHol
     public void onBindViewHolder(AlunoViewHolder viewHolder, final int position) {
         Aluno item = mSingleCheckList.get(position);
         try {
-            viewHolder.setDateToView(item, position);
+            viewHolder.setStudentToList(item, position);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -77,8 +85,12 @@ public class AlunoAdapter extends RecyclerView.Adapter<AlunoAdapter.AlunoViewHol
             mRadio.setOnClickListener(this);
         }
 
-        public void setDateToView(Aluno item, int position) throws Exception {
-            mRadio.setChecked(position == mSelectedItem);
+        public void setStudentToList(Aluno item, int position) {
+            id = Integer.parseInt(status.getString("id", ""));
+            int idFromDatabase = ProfileActivity.myDatabase.myDao().getIdFromFullName_User(item.getStudent_name());
+//            Toast.makeText(mContext, "sp_id = " + id + " ––– db_name = " + idFromDatabase, Toast.LENGTH_LONG).show();
+            // mRadio.setChecked(position == mSelectedItem);
+            mRadio.setChecked(idFromDatabase == id);
             mText.setText(item.getStudent_name());
         }
 

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_50"
+    tools:context=".fragments.LoginFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="71dp"
+                android:layout_height="76dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="false"
+                android:src="@drawable/logo_nobg"
+                fancy:srcCompat="@drawable/logo_nobg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="4dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/karma_light"
+                    android:includeFontPadding="false"
+                    android:text="Escola Primária"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-10dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/karma_bold"
+                    android:includeFontPadding="false"
+                    android:padding="0dp"
+                    android:text="One World Academy"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/karma_light"
+                    android:gravity="left|center"
+                    android:includeFontPadding="false"
+                    android:padding="0dp"
+                    android:text="Maxixe, Moçambique"
+                    android:textAlignment="center"
+                    android:textColor="@color/md_grey_800"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <android.support.design.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:paddingBottom="50dp"
+                fancy:cardBackgroundColor="@color/md_white_1000"
+                fancy:cardCornerRadius="10dp"
+                fancy:cardElevation="4dp"
+                fancy:cardUseCompatPadding="true"
+                fancy:contentPadding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="Autenticar"
+                        android:textAllCaps="false"
+                        android:textColor="@color/md_black_1000"
+                        android:textSize="30sp" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/et_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:hint="nome do usuário"
+                        android:inputType="textPersonName"
+                        android:textSize="14sp"
+                        fancy:met_floatingLabel="normal"
+                        fancy:met_floatingLabelAlwaysShown="true"
+                        fancy:met_floatingLabelText="Username*"
+                        fancy:met_floatingLabelTextColor="@color/md_grey_900"
+                        fancy:met_validateOnFocusLost="true" />
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="senha do usuário"
+                        android:inputType="textPassword"
+                        android:textSize="14sp"
+                        fancy:met_floatingLabel="normal"
+                        fancy:met_floatingLabelAlwaysShown="true"
+                        fancy:met_floatingLabelText="Senha*"
+                        fancy:met_floatingLabelTextColor="@color/md_grey_900"
+                        fancy:met_validateOnFocusLost="true" />
+
+                    <com.rilixtech.materialfancybutton.MaterialFancyButton
+                        android:id="@+id/btn_signin"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        fancy:mfb_borderWidth="1dp"
+                        fancy:mfb_defaultColor="@color/colorPrimaryDark"
+                        fancy:mfb_focusColor="#9bd823"
+                        fancy:mfb_fontIconSize="20sp"
+                        fancy:mfb_icon="@string/cmdi_login_variant"
+                        fancy:mfb_iconPosition="left"
+                        fancy:mfb_radius="4dp"
+                        fancy:mfb_text="Entrar"
+                        fancy:mfb_textColor="#FFFFFF">
+
+                    </com.rilixtech.materialfancybutton.MaterialFancyButton>
+
+                </LinearLayout>
+
+            </android.support.design.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

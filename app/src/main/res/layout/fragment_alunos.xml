@@ -5,9 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlunosFragment">
+    tools:context=".fragments.AlunosFragment">
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -46,36 +47,36 @@
                 android:text="A lista dos seus alunos registados.\nSelecione um dos alunos para ver a sua situação académica."
                 android:textAlignment="textStart"
                 android:textColor="@color/md_blue_grey_800"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="italic" />
 
             <!--<android.support.v7.widget.CardView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginBottom="@dimen/default_padding_bottom"-->
-                <!--android:layout_marginEnd="40dp"-->
-                <!--android:layout_marginLeft="40dp"-->
-                <!--android:layout_marginRight="40dp"-->
-                <!--android:layout_marginStart="40dp"-->
-                <!--app:cardElevation="0dp"-->
-                <!--app:contentPadding="10dp">-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/default_padding_bottom"-->
+            <!--android:layout_marginEnd="40dp"-->
+            <!--android:layout_marginLeft="40dp"-->
+            <!--android:layout_marginRight="40dp"-->
+            <!--android:layout_marginStart="40dp"-->
+            <!--app:cardElevation="0dp"-->
+            <!--app:contentPadding="10dp">-->
 
-                <LinearLayout
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/default_padding_bottom"
+                android:layout_marginEnd="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginStart="40dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_alunos"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="@dimen/default_padding_bottom"
-                    android:layout_marginEnd="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginStart="40dp"
-                    android:orientation="vertical">
-
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/rv_alunos"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
             <!--</android.support.v7.widget.CardView>-->
 
@@ -90,29 +91,28 @@
                 android:layout_marginTop="@dimen/default_padding_bottom"
                 android:fontFamily="@font/karma_light"
                 android:text="Tens mais alunos? Adicione ele(a) aqui."
-                android:textAlignment="textEnd"
                 android:textColor="@color/md_grey_700"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:textStyle="italic" />
+
 
             <com.rilixtech.materialfancybutton.MaterialFancyButton
                 android:id="@+id/btn_add"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
                 android:layout_gravity="right"
-                android:layout_marginRight="40dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="13dp"
-                android:paddingRight="20dp"
-                android:paddingTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:gravity="center"
+                android:paddingBottom="1dp"
+                fancy:mfb_borderColor="@color/md_blue_A400"
                 fancy:mfb_borderWidth="1dp"
-                fancy:mfb_defaultColor="@color/md_blue_A200"
-                fancy:mfb_focusColor="@color/md_blue_A700"
-                fancy:mfb_icon="@string/cmdi_plus_circle"
-                fancy:mfb_iconPosition="left"
-                fancy:mfb_radius="10dp"
-                fancy:mfb_text="Adicionar"
-                fancy:mfb_textColor="#FFFFFF"></com.rilixtech.materialfancybutton.MaterialFancyButton>
+                fancy:mfb_defaultColor="@color/md_white_1000"
+                fancy:mfb_focusColor="@color/md_blue_50"
+                fancy:mfb_fontIconSize="24sp"
+                fancy:mfb_icon="@string/cmdi_plus"
+                fancy:mfb_radius="4dp"
+                fancy:mfb_text=""
+                fancy:mfb_textColor="@color/md_blue_A400" />
 
         </LinearLayout>
     </ScrollView>

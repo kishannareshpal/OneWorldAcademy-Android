@@ -1,13 +1,15 @@
-package com.oneworldacademymz.owa;
+package com.oneworldacademymz.owa.fragments;
 
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.chip.Chip;
 import android.support.design.chip.ChipGroup;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,13 +17,24 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
+import com.oneworldacademymz.owa.Aluno;
+import com.oneworldacademymz.owa.AlunoAdapter;
+import com.oneworldacademymz.owa.R;
+import com.oneworldacademymz.owa.activities.ProfileActivity;
+import com.oneworldacademymz.owa.room.database.entities.MyDatabase;
+import com.oneworldacademymz.owa.room.database.entities.entities.User;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+ /**
+        ______/   __________
+        |  Alunos Adapter  |
+        –––––(0)–––(0)––––––
+ **/
+
+
 public class AlunosFragment extends Fragment {
 
 
@@ -35,6 +48,11 @@ public class AlunosFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_alunos, container, false);
+
+        SharedPreferences status = ProfileActivity.status;
+        MyDatabase myDatabase = ProfileActivity.myDatabase;
+        List<User> students = myDatabase.myDao().getUsers();
+
 
 //        final List<Aluno> alunoList = new ArrayList<>();
 //        final RecyclerView recyclerView_alunos    = view.findViewById(R.id.rv_alunos);
@@ -55,13 +73,19 @@ public class AlunosFragment extends Fragment {
         final List<Aluno> mSingleCheckList = new ArrayList<>();
         AlunoAdapter mAdapter;
 
-        // TODO: 6/25/18 Limit to 3 students;
-        mSingleCheckList.add(new Aluno("Monica Lopes"));
+
+        // TODO: 6/28/18 Limit to 4 students;
+        for(User student : students){
+            Log.v("owa_database", "Student List: " + student.getId() + " ––––– " + "Student Name: " + student.getFirst_name() + " " + student.getLast_name());
+            mSingleCheckList.add(new Aluno(student.getFirst_name() + " " + student.getLast_name()));
+        }
 
 
         mAdapter = new AlunoAdapter(getActivity(), mSingleCheckList);
         mRecyclerView.setLayoutManager(new CustomLinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false)); // set the list layout style to vertical.
         mRecyclerView.setAdapter(mAdapter);
+
+
 
         mAdapter.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

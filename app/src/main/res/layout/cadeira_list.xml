@@ -5,11 +5,11 @@
     android:id="@+id/cv_cadeiraCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="@color/md_grey_900"
+    app:cardBackgroundColor="@color/md_green_400"
     app:cardCornerRadius="3dp"
     app:cardElevation="0dp"
     app:cardUseCompatPadding="true"
-    app:contentPadding="10dp">
+    app:contentPadding="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,41 +24,41 @@
             android:text="PORTUGUÊS"
             android:textAllCaps="true"
             android:textColor="@color/md_white_1000"
-            android:textSize="14sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_1oTrim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_thin"
+            android:fontFamily="@font/roboto"
             android:text="1o Trimestre: 17"
             android:textColor="@color/md_white_1000"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tv_2oTrim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_thin"
+            android:fontFamily="@font/roboto"
             android:text="2o Trimestre: 15"
             android:textColor="@color/md_white_1000"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tv_3oTrim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_thin"
+            android:fontFamily="@font/roboto"
             android:text="3o Trimestre: 16"
             android:textColor="@color/md_white_1000"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tv_notafinal"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:gravity="right"
+            android:layout_gravity="right|end"
+            android:fontFamily="@font/roboto_bold"
             android:text="Nota Final: 16"
             android:textColor="@color/md_grey_50"
             android:textSize="14sp" />

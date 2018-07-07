@@ -1,12 +1,12 @@
-package com.oneworldacademymz.owa;
+package com.oneworldacademymz.owa.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 //import com.google.android.gms.signin.SignIn;
+import com.oneworldacademymz.owa.R;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 
@@ -25,11 +25,8 @@ public class MainActivity extends AppCompatActivity {
         signinbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SignInActivity.class));
+                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
             }
         });
-    }
-
-    public void setup() {
     }
 }

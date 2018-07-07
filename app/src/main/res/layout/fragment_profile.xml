@@ -1,14 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".fragments.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/roboto_black"
+                android:text="Perfil"
+                android:textAllCaps="false"
+                android:textColor="@color/md_black_1000"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginStart="40dp"
+                android:fontFamily="@font/karma_light"
+                android:text="Os dados pessoais do aluno selecionado."
+                android:textAlignment="textStart"
+                android:textColor="@color/md_blue_grey_800"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/default_padding_bottom"
+                android:layout_marginEnd="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginStart="40dp"
+                android:orientation="vertical">
+
+                <android.support.design.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="1dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView122312"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/karma_light"
+                                android:text="Primeiro Nome:"
+                                android:textAllCaps="true"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_primeiroNome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/karma_bold"
+                                android:gravity="center_vertical"
+                                android:text="Kishan"
+                                android:textAllCaps="false"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.rilixtech.materialfancybutton.MaterialFancyButton
+                                android:id="@+id/btn_editPrimeiroNome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="1dp"
+                                fancy:mfb_icon="@string/cmdi_pencil_circle_outline"
+                                fancy:mfb_defaultColor="@color/md_white_1000"
+                                fancy:mfb_focusColor="@color/md_grey_50"
+                                fancy:mfb_fontIconSize="20sp"
+                                fancy:mfb_radius="4dp"
+                                fancy:mfb_text=""
+                                fancy:mfb_textColor="@color/md_blue_A400" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.design.card.MaterialCardView>
+
+                <android.support.design.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="1dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView1234"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/karma_light"
+                                android:text="Último Nome (Apelido):"
+                                android:textAllCaps="true"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_ultimoNome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/karma_bold"
+                                android:gravity="center_vertical"
+                                android:text="Jadav"
+                                android:textAllCaps="false"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.rilixtech.materialfancybutton.MaterialFancyButton
+                                android:id="@+id/btn_editUltimoNome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="1dp"
+                                fancy:mfb_icon="@string/cmdi_pencil_circle_outline"
+                                fancy:mfb_defaultColor="@color/md_white_1000"
+                                fancy:mfb_focusColor="@color/md_grey_50"
+                                fancy:mfb_fontIconSize="20sp"
+                                fancy:mfb_radius="4dp"
+                                fancy:mfb_text=""
+                                fancy:mfb_textColor="@color/md_blue_A400" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.design.card.MaterialCardView>
+
+                <com.rilixtech.materialfancybutton.MaterialFancyButton
+                    android:id="@+id/btn_changePassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    fancy:mfb_defaultColor="@color/md_blue_A200"
+                    fancy:mfb_focusColor="@color/md_blue_A400"
+                    fancy:mfb_fontIconSize="18sp"
+                    fancy:mfb_icon="@string/cmdi_lock_reset"
+                    fancy:mfb_radius="4dp"
+                    fancy:mfb_text="Trocar a Senha"
+                    fancy:mfb_textColor="@color/md_white_1000"
+                    fancy:mfb_textFont="roboto.ttf"></com.rilixtech.materialfancybutton.MaterialFancyButton>
+
+
+                <com.rilixtech.materialfancybutton.MaterialFancyButton
+                    android:id="@+id/btn_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    fancy:mfb_defaultColor="@color/md_red_A200"
+                    fancy:mfb_focusColor="@color/md_red_A700"
+                    fancy:mfb_fontIconSize="18sp"
+                    fancy:mfb_icon="@string/cmdi_logout"
+                    fancy:mfb_radius="6dp"
+                    fancy:mfb_text="Sair da conta"
+                    fancy:mfb_textColor="@color/md_white_1000"
+                    fancy:mfb_textFont="roboto.ttf">
+
+                </com.rilixtech.materialfancybutton.MaterialFancyButton>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
